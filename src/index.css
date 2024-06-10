@@ -1,4 +1,7 @@
-/*In dit bestand plaats je alle algemene styling die geldt voor de gehele applicatie*/
+/*De algemene styling die geldt voor de gehele applicatie*/
+
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
 
 :root {
   --color-primary: #38E991;
@@ -11,6 +14,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: none
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
@@ -22,16 +30,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  color: var(--color-secondary);
 }
+
+img {
+  width: 100%;
+}
+
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
 
 button, input, select, textarea {
   font-family: inherit;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  margin-block: 0.67em;
 }
 
 h1 {
@@ -55,3 +67,29 @@ h4 {
 p {
   margin-block: 0.5em;
 }
+
+
+/* --------------- 3. Reusables ----------------------- */
+
+.outer-content-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-content-container {
+  flex-basis: 1400px;
+  flex-shrink: 1;
+  flex-grow: 0;
+  margin: 0 20px;
+  padding: 100px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+
