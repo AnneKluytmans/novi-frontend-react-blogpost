@@ -1,0 +1,35 @@
+.header--home {
+    text-align: center;
+    padding: 0 30px;
+}
+
+.introduction-section--home__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.introduction-section--home figure {
+    flex-basis: 640px;
+    padding: 0 20px;
+}
+
+.introduction-section--home img {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.introduction-section--home__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 480px;
+    flex-grow: 1;
+    flex-shrink: 0;
+
+    padding: 24px;
+    font-size: 1.3em;
+}
+
+
+

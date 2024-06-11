@@ -1,0 +1,16 @@
+.section--not-found {
+    text-align: center;
+    padding: 0 30px;
+}
+
+.section--not-found__link {
+    text-decoration: underline;
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+
+.section--not-found__link:hover {
+    color: var(--color-primary);
+    cursor: pointer;
+}
