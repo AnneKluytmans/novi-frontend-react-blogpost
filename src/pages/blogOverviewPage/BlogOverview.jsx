@@ -1,9 +1,9 @@
-import data from '../../constants/data.json'
+import blogs from '../../constants/data.json'
 import './BlogOverview.css';
+import BlogItem from "../../components/blogItem/BlogItem.jsx";
 
 function BlogOverview() {
-    const amountOfBlogs = data.length
-    const blogs = data
+    const amountOfBlogs = blogs.length
 
     return (
         <>
@@ -14,11 +14,13 @@ function BlogOverview() {
                 <div className="blog-overview-container">
                     {blogs.map((blog) => {
                          return (
-                              <article key={blog.id} className="blog-item">
-                                  <h3>{blog.title}</h3>
-                                  <h4>({blog.author})</h4>
-                                  <p>{blog.comments} reacties - {blog.shares} keer gedeeld</p>
-                              </article>
+                             <BlogItem
+                                 key={blog.id}
+                                 title={blog.title}
+                                 author={blog.author}
+                                 comments={blog.comments}
+                                 shares={blog.shares}
+                             />
                        );
                       })}
                 </div>
