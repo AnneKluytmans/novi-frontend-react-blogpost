@@ -27,58 +27,48 @@ function NewPost() {
         <section className="outer-content-container">
             <form className="new-post--container" onSubmit={handleSubmit(handleFormSubmit)}>
                 <h1>Nieuwe Post toevoegen</h1>
-                {/*Waarom werkt mijn inputveld component niet?*/}
-                {/*<InputField*/}
-                {/*    id="title-field"*/}
-                {/*    type="text"*/}
-                {/*    name="title"*/}
-                {/*    label="Titel"*/}
-                {/*    value={true}*/}
-                {/*    message="Dit veld is verplicht"*/}
-                {/*    error={errors.title}*/}
-                {/*/>*/}
-                <div className="input-field">
-                    <label htmlFor="title-field">Titel</label>
-                    <input
-                        type="text"
-                        id="title-field"
-                        {...register("title", {
-                            required: {
-                                value: true,
-                                message: 'Dit veld is verplicht',
-                            },
-                        })}
-                    />
-                    {errors.title && <p className="form-error-message">{errors.title.message}</p>}
-                </div>
-                <div className="input-field">
-                    <label htmlFor="subtitle-field">Subtitel</label>
-                    <input
-                        type="text"
-                        id="subtitle-field"
-                        {...register("subtitle", {
-                            required: {
-                                value: true,
-                                message: 'Dit veld is verplicht',
-                            },
-                        })}
-                    />
-                    {errors.subtitle && <p className="form-error-message">{errors.subtitle.message}</p>}
-                </div>
-                <div className="input-field">
-                    <label htmlFor="author-field">Naam en achternaam</label>
-                    <input
-                        type="text"
-                        id="author-field"
-                        {...register("author", {
-                            required: {
-                                value: true,
-                                message: 'Dit veld is verplicht',
-                            },
-                        })}
-                    />
-                    {errors.author && <p className="form-error-message">{errors.author.message}</p>}
-                </div>
+                <InputField
+                    id="title-field"
+                    type="text"
+                    name="title"
+                    label="Titel"
+                    register={register}
+                    validation={{
+                        required: {
+                            value: true,
+                            message: 'Dit veld is verplicht',
+                        },
+                    }}
+                    error={errors.title}
+                />
+                <InputField
+                    id="subtitle-field"
+                    type="text"
+                    name="subtitle"
+                    label="Subtitel"
+                    register={register}
+                    validation={{
+                        required: {
+                            value: true,
+                            message: 'Dit veld is verplicht',
+                        },
+                    }}
+                    error={errors.subtitle}
+                />
+                <InputField
+                    id="author-field"
+                    type="text"
+                    name="author"
+                    label="Naam en achternaam"
+                    register={register}
+                    validation={{
+                        required: {
+                            value: true,
+                            message: 'Dit veld is verplicht',
+                        },
+                    }}
+                    error={errors.author}
+                />
                 <div className="input-field">
                     <label htmlFor="content-field">Blogpost</label>
                     <textarea
