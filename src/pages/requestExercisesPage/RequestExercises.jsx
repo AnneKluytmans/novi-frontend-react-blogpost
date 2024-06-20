@@ -3,7 +3,7 @@ import axios from "axios";
 
 function RequestExercises() {
     const postId = 6
-    const deletePostId = 17
+    const deletePostId = 18
     const updatePostId = 1
 
     async function fetchAllPosts() {
@@ -27,10 +27,10 @@ function RequestExercises() {
     async function createPost() {
         try {
             const response = await axios.post("http://localhost:3000/posts", {
-                "title": "Wat gebruiker heeft ingevuld",
-                "subtitle": "Wat gebruiker heeft ingevuld",
-                "content": "Wat gebruiker heeft ingevuld, in dit geval minder dan 100 woorden",
-                "author": "Voornaam achternaam",
+                "title": "Titel die de gebruiker heeft ingevuld",
+                "subtitle": "Subtitel die de gebruiker heeft ingevuld",
+                "content": "De post die de gebruiker heeft ingevuld, in dit geval minder dan 100 woorden",
+                "author": "Voornaam en achternaam",
                 "created": "2023-09-21T09:30:00Z",
                 "readTime": 1,
                 "comments": 0,
