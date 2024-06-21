@@ -9,3 +9,8 @@
     margin: 8px;
     cursor: pointer;
 }
+
+.delete-button {
+    font-size: 1rem;
+    max-width: 200px;
+}

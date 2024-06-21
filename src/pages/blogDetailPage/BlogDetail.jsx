@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { CaretLeft, Clock } from "@phosphor-icons/react";
 import Button from "../../components/button/Button.jsx";
@@ -10,6 +10,7 @@ import './BlogDetail.css';
 
 function BlogDetail() {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [postDetails, setPostDetails] = useState({});
     const [deleteMessage, setDeleteMessage] = useState('');
     const [error, toggleError] = useState(false);
@@ -40,6 +41,9 @@ function BlogDetail() {
             const response = await axios.delete(`http://localhost:3000/posts/${id}`);
             console.log(response.data);
             setDeleteMessage("De post is succesvol verwijderd!🎉");
+
+            setTimeout(() => { navigate("/posts") }, 1000);
+
         } catch (e) {
             console.error(e);
             setDeleteMessage("Het verwijderen is niet gelukt.😿 Probeer het opnieuw.");
@@ -68,7 +72,7 @@ function BlogDetail() {
                     <CaretLeft color="#38E991" size={24} />
                     <p>Terug naar de overzichtspagina</p>
                 </Link>
-                <Button type="button" clickHandler={deletePost} className="button" text="Post verwijderen" />
+                <Button type="button" clickHandler={deletePost} className="button delete-button" text="Post verwijderen" disabled={loading} />
                 {deleteMessage && <h2>{deleteMessage}</h2>}
             </div>
         </section>
