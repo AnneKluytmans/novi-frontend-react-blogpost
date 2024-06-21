@@ -12,7 +12,7 @@ function Navigation() {
                     <ul className="navbar-links">
                         <NavItem to="/" name="Home"/>
                         <NavItem to="/new-post" name="Nieuwe post"/>
-                        <NavItem to="/blog-overview" name="Alle posts"/>
+                        <NavItem to="/posts" name="Alle posts"/>
                     </ul>
                 </div>
             </nav>
