@@ -1,0 +1,11 @@
+.header--blog-overview {
+    padding: 0 50px;
+}
+
+.blog-overview-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+

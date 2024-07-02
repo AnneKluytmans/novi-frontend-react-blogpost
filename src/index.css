@@ -1,9 +1,13 @@
-/*In dit bestand plaats je alle algemene styling die geldt voor de gehele applicatie*/
+/*De algemene styling die geldt voor de gehele applicatie*/
+
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
 
 :root {
   --color-primary: #38E991;
   --color-secondary: #2C2F39;
   --color-tertiary: #50535C;
+  --color-secondary-light: #E8E9ED;
   --color-white: #FFFFFF;
 }
 
@@ -11,6 +15,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: none
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
@@ -22,16 +31,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  color: var(--color-secondary);
 }
+
+img {
+  width: 100%;
+}
+
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
 
 button, input, select, textarea {
   font-family: inherit;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  margin-block: 0.67em;
+a {
+  color: var(--color-primary)
 }
 
 h1 {
@@ -41,17 +58,45 @@ h1 {
 }
 
 h2 {
-  margin-block: 0.83em;
+  font-size: 1.8rem;
+  margin-block: 0.2em;
 }
 
 h3 {
-  margin-block: 1em;
+  font-size: 1.4rem;
 }
 
 h4 {
-  margin-block: 1.33em;
+  font-size: 1.2rem;
 }
 
 p {
-  margin-block: 0.5em;
+  font-size: 1rem;
+  margin-block: 0.3em;
 }
+
+
+/* --------------- 3. Reusables ----------------------- */
+
+.outer-content-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-content-container {
+  flex-basis: 1400px;
+  flex-shrink: 1;
+  flex-grow: 0;
+  margin: 0 20px;
+  padding: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+

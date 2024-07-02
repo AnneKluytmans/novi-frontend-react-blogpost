@@ -1,0 +1,16 @@
+.navbar-link .active-link {
+    text-decoration: underline;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.navbar-link .default-link {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.navbar-link .active-link:hover,
+.navbar-link .default-link:hover {
+    color: var(--color-primary);
+}
