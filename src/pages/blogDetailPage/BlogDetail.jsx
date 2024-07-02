@@ -11,7 +11,7 @@ import './BlogDetail.css';
 function BlogDetail() {
     const { id } = useParams();
     const navigate = useNavigate();
-    const [postDetails, setPostDetails] = useState({});
+    const [postDetails, setPostDetails] = useState();
     const [deleteMessage, setDeleteMessage] = useState('');
     const [error, toggleError] = useState(false);
     const [loading, toggleLoading] = useState(false);
@@ -53,7 +53,7 @@ function BlogDetail() {
     return (
         <section className="outer-content-container">
             <div className="blog-detail--container">
-                {Object.keys(postDetails).length > 0 ?
+                {postDetails ?
                     <>
                         <h1>{postDetails.title}</h1>
                         <h2>{postDetails.subtitle}</h2>
