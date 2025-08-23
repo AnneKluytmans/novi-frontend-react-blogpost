@@ -20,6 +20,7 @@ The goal of this project is to practice React Router, dynamic routing, state man
 
 - **React** (v18.2.0)
 - **Vite**
+- **Axios** (for API requests)
 - **HTML5**
 - **CSS3**
 - **JavaScript ES6+**
