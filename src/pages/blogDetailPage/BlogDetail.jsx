@@ -59,7 +59,7 @@ function BlogDetail() {
                         <h2>{postDetails.subtitle}</h2>
                         <p><em>Geschreven door {postDetails.author} op {formatDateString(postDetails.created)}</em></p>
                         <span className="blog-detail--read-time">
-                        <Clock color="#50535C" size={18} />
+                        <Clock color="#50535C" size={18}/>
                         <p>{postDetails.readTime} minuten lezen</p>
                         </span>
                         <p className="blog-detail--content">{postDetails.content}</p>
@@ -67,16 +67,17 @@ function BlogDetail() {
                     </> : null
                 }
                 {loading && <h2>Loading...</h2>}
-                {error && <ErrorMessage message="Het ophalen van de post is niet gelukt. 😿 Laad de pagina opnieuw." />}
+                {error && <ErrorMessage message="Het ophalen van de post is niet gelukt. 😿 Laad de pagina opnieuw."/>}
                 <Link to="/posts" className="blog-detail--back-link">
-                    <CaretLeft color="#38E991" size={24} />
+                    <CaretLeft color="#38E991" size={24}/>
                     <p>Terug naar de overzichtspagina</p>
                 </Link>
-                <Button type="button" clickHandler={deletePost} className="button delete-button" text="Post verwijderen" disabled={loading} />
+                <Button type="button" clickHandler={deletePost} className="button delete-button" text="Post verwijderen"
+                        disabled={loading}/>
                 {deleteMessage && <h2>{deleteMessage}</h2>}
             </div>
         </section>
-    );
+);
 }
 
 export default BlogDetail;
