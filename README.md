@@ -89,17 +89,21 @@ The goal of this project is to practice React Router, dynamic routing, state man
 
 ## Project Setup
 
-1. Clone or open the repository in an IDE
+1. Clone or open the repository & the server repository (git@github.com:AnneKluytmans/novi-frontend-react-blogpost-backend.git) in an IDE
 
-2. Install dependencies
+2. Install dependencies in both projects
    ```bash
    npm install
    ```
 3. Start the development server
+    ```bash
+    npm run json:server
+    ```
+4. Run the application with
    ```bash
    npm run dev
    ```
-4. Open your browser at http://localhost:5173 to view the app.
+5. Open your browser at http://localhost:5173 to view the app.
 
 
 ## Credits
