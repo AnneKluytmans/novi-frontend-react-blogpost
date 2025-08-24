@@ -89,7 +89,7 @@ The goal of this project is to practice React Router, dynamic routing, state man
 
 ## Project Setup
 
-1. Clone or open the repository & the server repository (git@github.com:AnneKluytmans/novi-frontend-react-blogpost-backend.git) in an IDE
+1. Clone or open the repository & the server repository (git@github.com:AnneKluytmans/novi-frontend-react-blogpost-server.git) in an IDE
 
 2. Install dependencies in both projects
    ```bash
